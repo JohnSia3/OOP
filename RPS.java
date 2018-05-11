@@ -5,13 +5,13 @@ public class RPS {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int evilGen, winCount=0, round=0, evilWinCount=0, popUp=1;
-		char chooseMove, again;
-		String evilAns;
+		char again; //this was for to try again. but uh??
+		String chooseMove;
 		evilGen = (int)(Math.random() * 3 + 1);
 		
 Scanner input = new Scanner(System.in);
 System.out.println("OH NO Evil_DevilP0lluter16 IS TAKING OVER THE PROGRAM! \n\nDEFEAT HIM BY"+
-" DEFEATING HIM IN ROCK, PAPER, SCISSORS!!"); //use window pane to produce message "error" after this. 
+" PLAYING IN ROCK, PAPER, SCISSORS!!"); //use window pane to produce message "error" after this. 
 
 System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n>");
 //put the above in a loop so that user enter a word and next message gets printed
@@ -19,16 +19,16 @@ System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n>");
 while((winCount<=2||evilWinCount<=2)&&popUp<=1) { //ive tried input.hasNextInt()&input.hasNext() to make it try again. but none worked. help me
 while(round<=3 ) { //exit loop
 //while(winCount<3 && round<3 ) { 
-	chooseMove = input.next().charAt(0);
+	chooseMove = input.next();
 
-	if(chooseMove == 'R') {
+	if(chooseMove.equalsIgnoreCase("Rock")) {
 System.out.print("You chose rock"); //put ASCII art of rock here
 if(evilGen == 1) {
-	evilAns = "Rock";
+	
 	System.out.println("\nEvil also chose \"Rock\". No one wins this round :( ");
 	
 } else if(evilGen == 2) {
-	evilAns = "Scissors";
+	
 	System.out.println("\nEvil chose \"Scissors\". You WIN this round!! Yippee ");
 	winCount++;
 	round++;
@@ -37,29 +37,29 @@ System.out.println("\nEvil chose \"Paper\". You lost this round :'(");
 round++;
 
 	}}
-	else if(chooseMove == 'S') {
+	else if(chooseMove.equalsIgnoreCase("Scissors")) {
 		System.out.print("You chose scissors"); //put ASCII art ofscissors etc here
 		if(evilGen == 1) {
-			evilAns = "Rock";
+			
 			System.out.println("\nEvil chose \"Rock\". You lost this round :'( ");
 			round++;
 		} else if(evilGen == 2) {
-			evilAns = "Scissors";
+			
 			System.out.println("\nEvil also chose \"Scissors\". No one wins this round :( ");
 		
 		} else {
 		System.out.println("\nEvil chose \"Paper\". You WIN this round!! Yippee ");
 		winCount++;
 		round++;}
-	} else if(chooseMove == 'P') {
-			System.out.print("You chose papers"); //put ASCII art of paper etc here
+	} else if(chooseMove.equalsIgnoreCase("Paper")) {
+			System.out.print("You chose paper"); //put ASCII art of paper etc here
 			if(evilGen == 1) {
-				evilAns = "Rock";
+				
 				System.out.println("\nEvil chose \"Rock\". You WIN this round!! Yippee");
 				round++;
 				winCount++;
 			} else if(evilGen == 2) {
-				evilAns = "Scissors";
+				
 				System.out.println("\nEvil chose \"Scissors\". You lost this round :'(  ");
 				round++;
 			} else {
