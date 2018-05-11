@@ -79,7 +79,7 @@ if(winCount==2) {
 	System.out.println("You defeated EVILDEVIL_POLLUTER16!! You won a very luxurious car worth $19999996 :D"); //pop up window saying "yay"
 	popUp++;
 } else {
-	System.out.println("You just destroyed humanity :(. Would you like to try again? Enter Y to continue or number 2 to exit.");
+	System.out.println("You just destroyed humanity :(. Would you like to try again? Enter Yes to continue or No to exit.");
 	popUp++;
 	
 }
