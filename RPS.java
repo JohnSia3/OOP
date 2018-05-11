@@ -7,7 +7,7 @@ public class RPS {
 		int evilGen, winCount=0, round=0, evilWinCount=0, popUp=1;
 		char again; //this was for to try again. but uh??
 		String chooseMove;
-		evilGen = (int)(Math.random() * 3 + 1);
+		evilGen = (int)(Math.random()*3+1);
 		
 Scanner input = new Scanner(System.in);
 System.out.println("OH NO Evil_DevilP0lluter16 IS TAKING OVER THE PROGRAM! \n\nDEFEAT HIM BY"+
@@ -16,8 +16,8 @@ System.out.println("OH NO Evil_DevilP0lluter16 IS TAKING OVER THE PROGRAM! \n\nD
 System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n>");
 //put the above in a loop so that user enter a word and next message gets printed
 
-while((winCount<=2||evilWinCount<=2)&&popUp<=1) { //ive tried input.hasNextInt()&input.hasNext() to make it try again. but none worked. help me
-while(round<=3 ) { //exit loop
+while((winCount<=2||evilWinCount<=2)&&winCount!=3&&popUp<=1) { //ive tried input.hasNextInt()&input.hasNext() to make it try again. but none worked. help me
+while(round<2 ) { //exit loop
 //while(winCount<3 && round<3 ) { 
 	chooseMove = input.next();
 
@@ -62,9 +62,12 @@ round++;
 				
 				System.out.println("\nEvil chose \"Scissors\". You lost this round :'(  ");
 				round++;
-			} else {
+			} else if(evilGen == 3) {
 			System.out.println("\nEvil also chose \"Paper\". No one wins this round :( ");
-			}}	System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n"+winCount+"/3"+"\n>");}
+			}
+	}else {
+		System.out.println("INVALID");
+	}	System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n"+winCount+"/3"+"\n>");}
 //System.out.println("You just destroyed humanity.......... :(.");}
 //not too sure how to make it that the user can try again solli boss & how to make what evil answered at the end of the final round
 
