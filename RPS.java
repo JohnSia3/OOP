@@ -7,6 +7,9 @@ public class RPS {
 		int evilGen, winCount=0, round=0, evilWinCount=0, popUp=1;
 		char again; //this was for to try again. but uh??
 		String chooseMove;
+		winCount++;
+		evilWinCount++;
+		
 		evilGen = (int)(Math.random()*3+1);
 		
 Scanner input = new Scanner(System.in);
@@ -17,7 +20,7 @@ System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n>");
 //put the above in a loop so that user enter a word and next message gets printed
 
 while((winCount<=2||evilWinCount<=2)&&winCount!=3&&popUp<=1) { //ive tried input.hasNextInt()&input.hasNext() to make it try again. but none worked. help me
-while(round<2 ) { //exit loop
+while(round<3 ) { //exit loop
 //while(winCount<3 && round<3 ) { 
 	chooseMove = input.next();
 
