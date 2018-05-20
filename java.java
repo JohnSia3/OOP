@@ -33,7 +33,7 @@ System.out.println("   , ,, ,                              \n" +
 		"  (( || `--'  | _______ |  |     ))  ( \n" + 
 		"(  )\\|| (  )\\ | - --- - | -| (  ( \\  ))\n" + 
 		"(\\/  || ))/ ( | -- - -- |  | )) )  \\(( \n" + 
-		" ( ()||((( ())|         |  |( (( () )hjm");
+		" ( ()||((( ())|         |  |( (( () )");
 System.out.print("Choose your move! \"Rock\", \"Paper\", \"Scissors\"\n\n>");
 //put the above in a loop so that user enter a word and next message gets printed
 
@@ -44,7 +44,14 @@ while(round<3 ) { //exit loop
 
 	if(chooseMove.equalsIgnoreCase("Rock")) {
 		evilGen = (int)(Math.random()*3+1);
-		System.out.print("You chose rock"); //put ASCII art of rock here
+		System.out.println("You chose rock"); //put ASCII art of rock here
+		System.out.print("    _______\n" + 
+				"---'   ____)\n" + 
+				"      (_____)\n" + 
+				"      (_____)\n" + 
+				"      (____)\n" + 
+				"---.__(___)\n" + 
+				"");
 		if(evilGen == 1) {
 			evilGen = (int)(Math.random()*3+1);
 			System.out.println("\nEvil also chose \"Rock\". No one wins this round :( ");
@@ -63,7 +70,13 @@ while(round<3 ) { //exit loop
 		}
 	else if(chooseMove.equalsIgnoreCase("Scissors")) {
 		evilGen = (int)(Math.random()*3+1);
-		System.out.print("You chose scissors"); //put ASCII art ofscissors etc here
+		System.out.println("You chose scissors"); //put ASCII art ofscissors etc here
+		System.out.print("    _______\n" + 
+				"---'   ____)____\n" + 
+				"          ______)\n" + 
+				"       __________)\n" + 
+				"      (____)\n" + 
+				"---.__(___)");
 		if(evilGen == 1) {
 			evilGen = (int)(Math.random()*3+1);
 			System.out.println("\nEvil chose \"Rock\". You lost this round :'( ");
@@ -79,7 +92,13 @@ while(round<3 ) { //exit loop
 		round++;}
 	} else if(chooseMove.equalsIgnoreCase("Paper")) {
 			evilGen = (int)(Math.random()*3+1);
-			System.out.print("You chose paper"); //put ASCII art of paper etc here
+			System.out.println("You chose paper"); //put ASCII art of paper etc here
+			System.out.print("    _______\n" + 
+					"---'   ____)____\n" + 
+					"          ______)\n" + 
+					"          _______)\n" + 
+					"         _______)\n" + 
+					"---.__________)");
 			if(evilGen == 1) {
 				evilGen = (int)(Math.random()*3+1);
 				System.out.println("\nEvil chose \"Rock\". You WIN this round!! Yippee");
@@ -111,6 +130,18 @@ while(round<3 ) { //exit loop
 		if(winCount==2) {
 			JOptionPane.showMessageDialog(null,"WHIPPIEEEE!");
 			System.out.println("You defeated EVILDEVIL_POLLUTER16!! You won a very luxurious car worth $19999996 :D"); //pop up window saying "yay"
+			System.out.println("	                      ___..............._\n" + 
+					"	             __.. ' _'.\"\"\"\"\"\"\\\\\"\"\"\"\"\"\"\"- .`-._\n" + 
+					"	 ______.-'         (_) |      \\\\           ` \\\\`-. _\n" + 
+					"	/_       --------------'-------\\\\---....______\\\\__`.`  -..___\n" + 
+					"	| T      _.----._           Xxx|x...           |          _.._`--. _\n" + 
+					"	| |    .' ..--.. `.         XXX|XXXXXXXXXxx==  |       .'.---..`.     -._\n" + 
+					"	\\_j   /  /  __  \\  \\        XXX|XXXXXXXXXXX==  |      / /  __  \\ \\        `-.\n" + 
+					"	 _|  |  |  /  \\  |  |       XXX|\"\"'            |     / |  /  \\  | |          |\n" + 
+					"	|__\\_j  |  \\__/  |  L__________|_______________|_____j |  \\__/  | L__________J\n" + 
+					"	     `'\\ \\      / ./__________________________________\\ \\      / /___________\\\n" + 
+					"	        `.`----'.'                                     `.`----'.'\n" + 
+					"	          `\"\"\"\"'                                         `\"\"\"\"'");
 			popUp++;
 		} 
 	}
